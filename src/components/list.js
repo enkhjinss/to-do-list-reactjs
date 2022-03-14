@@ -1,12 +1,14 @@
-import ListDetail from "../components/listDetail.js";
+import { ListDetail } from "../components/listDetail.js";
 import Check from "../components/check.js";
 
-const List = () => {
+export const List = ({ tasks }) => {
     return (
         <div className="listsContainer">
-            <ListDetail />
+            {tasks.map(({ title }, i) => {
+                <ListDetail title={title} key={i} />;
+            })}
+
             <Check />
         </div>
-    )
-}
-export default List;
+    );
+};
