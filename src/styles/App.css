@@ -25,6 +25,7 @@ main {
 }
 .listContainer {
     height: 50%;
+    overflow: scroll;
 }
 .checkContainer {
     height: 50%;
@@ -52,7 +53,10 @@ p {
   margin-left: 8px;
 }
 .idk {
-  height: 22px;
+  height: 30px;
   width: 90%;
+}
+svg {
+    cursor: pointer;
 }
 

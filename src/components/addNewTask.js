@@ -8,6 +8,7 @@ export const AddTask = ({ addNewTask }) => {
         setTitle(e.target.value);
     }
     const onButton = () => {
+        if(title === "") return;
         addNewTask({title: title});
         setTitle('');
     }
