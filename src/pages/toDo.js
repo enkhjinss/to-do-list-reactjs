@@ -14,7 +14,8 @@ const Todo = () => {
     const addNewTask = (newTask) => {
         db.collection("todos").add({
             text: newTask.title,
-            date: new Date()
+            date: new Date(),
+            isCheck: true
         });
     };
 
@@ -23,6 +24,7 @@ const Todo = () => {
             const docs = sshot.docs.map((doc) => ({
                 docid: doc.id,
                 title: doc.data().text,
+
             }));
             setTasks(docs);
         };
